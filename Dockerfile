@@ -14,7 +14,7 @@ WORKDIR /var/www/html
 
 # Copier le code
 COPY --chown=www-data:www-data ["./composer.json", "./composer.lock", "./"]
-COPY --chown=www-data:www-data ["./docroot", "./docroot/", "./"]
+COPY --chown=www-data:www-data ["./web", "./web/", "./"]
 COPY --chown=www-data:www-data ["./config", "./config/", "./"]
 
 RUN composer install --no-dev --optimize-autoloader
